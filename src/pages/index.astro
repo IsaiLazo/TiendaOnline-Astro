@@ -1,11 +1,20 @@
 ---
-import Tienda from '../components/Tienda.astro';
 import Layout from '../layouts/Layout.astro';
+import ProductList from '../components/ProductList.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const products = [
+	{ id: 1, name: 'Product 1', price: 19.99, imageUrl: '' },
+	{ id: 2, name: 'Product 2', price: 29.99, imageUrl: '' },
+	{ id: 3, name: 'Product 3', price: 39.99, imageUrl: '' },
+];
+
 ---
 
 <Layout>
-	<Tienda />
+	<main>
+		<h1>Welcome to our Online Store</h1>
+		<section>
+			<ProductList products={products} />
+		</section>
+	</main>
 </Layout>
